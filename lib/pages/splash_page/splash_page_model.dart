@@ -12,13 +12,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class SplashPageModel extends FlutterFlowModel<SplashPageWidget> {
-  ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // Stores action output result for [Custom Action - isBluetoothEnabled] action in SplashPage widget.
-  bool? bluetoothEnabled;
 
-  /// Initialization and disposal methods.
+  bool? bluetoothEnabled;
 
   void initState(BuildContext context) {}
 
@@ -26,7 +23,5 @@ class SplashPageModel extends FlutterFlowModel<SplashPageWidget> {
     unfocusNode.dispose();
   }
 
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
+  /// addinal action blocks go below
 }

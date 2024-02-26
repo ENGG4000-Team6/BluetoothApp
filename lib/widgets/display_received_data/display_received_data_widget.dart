@@ -39,14 +39,15 @@ class _DisplayReceivedDataWidgetState extends State<DisplayReceivedDataWidget> {
     super.initState();
     _model = createModel(context, () => DisplayReceivedDataModel());
 
-    // On component load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       _model.receivedDataTimer = InstantTimer.periodic(
         duration: Duration(milliseconds: 1000),
         callback: (timer) async {
+          print("Fetching received data...");
           _model.receivedData = await actions.receiveData(
             widget.device!,
           );
+          print("Received data: ${_model.receivedData}");
           setState(() {
             _model.data = _model.receivedData;
           });

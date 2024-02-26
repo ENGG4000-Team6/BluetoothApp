@@ -1,12 +1,8 @@
-// Automatic FlutterFlow imports
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'index.dart'; // Imports other custom actions
 import 'package:flutter/material.dart';
-// Begin custom action code
-// DO NOT REMOVE OR MODIFY THE CODE ABOVE!
-
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 
 Future<String?> receiveData(BTDeviceStruct deviceInfo) async {
@@ -24,3 +20,19 @@ Future<String?> receiveData(BTDeviceStruct deviceInfo) async {
   }
   return null;
 }
+
+//send as list
+// Future<List<int>?> receiveData(BTDeviceStruct deviceInfo) async {
+//   final device = BluetoothDevice.fromId(deviceInfo.id, name: deviceInfo.name);
+//   final services = await device.discoverServices();
+//   for (BluetoothService service in services) {
+//     for (BluetoothCharacteristic characteristic in service.characteristics) {
+//       final isNotify = characteristic.properties.notify;
+//       if (isNotify) {
+//         final value = await characteristic.read();
+//         return value;
+//       }
+//     }
+//   }
+//   return null;
+// }

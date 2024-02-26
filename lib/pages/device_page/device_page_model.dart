@@ -16,28 +16,19 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class DevicePageModel extends FlutterFlowModel<DevicePageWidget> {
-  ///  Local state fields for this page.
 
   int? currentRssi;
 
   String? receivedValue;
 
-  ///  State fields for stateful widgets in this page.
-
   final unfocusNode = FocusNode();
   InstantTimer? rssiUpdateTimer;
-  // Stores action output result for [Custom Action - getRssi] action in DevicePage widget.
   int? updatedRssi;
-  // Model for StrengthIndicator component.
   late StrengthIndicatorModel strengthIndicatorModel;
-  // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
-  // Model for DisplayReceivedData component.
   late DisplayReceivedDataModel displayReceivedDataModel;
-
-  /// Initialization and disposal methods.
 
   void initState(BuildContext context) {
     strengthIndicatorModel =
@@ -56,7 +47,5 @@ class DevicePageModel extends FlutterFlowModel<DevicePageWidget> {
     displayReceivedDataModel.dispose();
   }
 
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
+  /// More action blocks if necessary?
 }

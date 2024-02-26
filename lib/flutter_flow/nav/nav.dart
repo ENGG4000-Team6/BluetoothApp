@@ -82,8 +82,6 @@ extension NavParamExtensions on Map<String, String?> {
 
 extension NavigationExtensions on BuildContext {
   void safePop() {
-    // If there is only one route on the stack, navigate to the initial
-    // page instead of popping.
     if (canPop()) {
       pop();
     } else {
@@ -111,9 +109,6 @@ class FFParameters {
   final Map<String, Future<dynamic> Function(String)> asyncParams;
 
   Map<String, dynamic> futureParamValues = {};
-
-  // Parameters are empty if the params map is empty or if the only parameter
-  // present is the special extra parameter reserved for the transition info.
   bool get isEmpty =>
       state.allParams.isEmpty ||
       (state.extraMap.length == 1 &&

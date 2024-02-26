@@ -13,25 +13,16 @@ import 'package:provider/provider.dart';
 
 class DisplayReceivedDataModel
     extends FlutterFlowModel<DisplayReceivedDataWidget> {
-  ///  Local state fields for this component.
 
   String? data;
 
-  ///  State fields for stateful widgets in this component.
-
   InstantTimer? receivedDataTimer;
-  // Stores action output result for [Custom Action - receiveData] action in DisplayReceivedData widget.
   String? receivedData;
-
-  /// Initialization and disposal methods.
+  //List<int>? receivedData;
 
   void initState(BuildContext context) {}
 
   void dispose() {
     receivedDataTimer?.cancel();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

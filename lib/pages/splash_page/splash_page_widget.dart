@@ -29,7 +29,6 @@ class _SplashPageWidgetState extends State<SplashPageWidget> {
     super.initState();
     _model = createModel(context, () => SplashPageModel());
 
-    // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       await requestPermission(bluetoothPermission);
       _model.bluetoothEnabled = await actions.isBluetoothEnabled();

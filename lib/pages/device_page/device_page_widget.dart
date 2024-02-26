@@ -43,8 +43,6 @@ class _DevicePageWidgetState extends State<DevicePageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => DevicePageModel());
-
-    // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       setState(() {
         _model.currentRssi = widget.deviceRssi;
